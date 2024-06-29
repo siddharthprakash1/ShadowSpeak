@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: grid;
+  place-items: center;
+  background-color: #121212;
+  background-image: radial-gradient(circle, rgba(120,119,198,0.8), rgba(0, 0, 0, 0.8));
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.title {
+  margin: 20px 0;
+  color: #a64ca6; /* Purple color for the h1 text */
+}
+
+.main {
+  border: 8px solid #333333;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  width: 95vw; /* Use relative width */
+  max-width: 1000px; /* Max width for large screens */
+  height: 90vh; /* Use relative height */
+  max-height: 600px; /* Max height for large screens */
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  display: flex;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 8px 16px;
+  color: #e0e0e0;
+  background-color: #2b2b2b;
+}
+
+.name > span {
+  color: #bbb;
+}
+
+.name-input {
+  font-size: 24px;
+  font-weight: 700;
+  color: #7300df;
+  flex-grow: 1;
+  border: none;
+  margin: 0px 12px;
+  outline: none;
+  background-color: #2b2b2b;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #0b001a; /* Dark purplish color */
+  flex-grow: 1; /* Use flex-grow to adjust height */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 10px; /* Add padding for spacing */
+}
+
+.message-left,
+.message-right {
+  list-style: none;
+  padding: 8px 12px;
+  margin: 12px;
+  max-width: 70%; /* Use percentage for max-width */
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.message-left {
+  border-radius: 20px 20px 20px 0px;
+  align-self: flex-start;
+  background-color: #7300df;
+  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #e0e0e0;
+}
+
+.message-right {
+  border-radius: 20px 20px 0px 20px;
+  align-self: flex-end;
+  background-color: #c500df;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #e0e0e0;
+}
+
+.message-left > p > span,
+.message-right > p > span {
+  display: block;
+  font-style: italic;
+  font-size: 12px;
+  margin-top: 4px;
+  color: #b3b3b3;
+}
+
+.feedback {
+  font-style: italic;
+  font-size: 14px;
+  padding: 0px 16px 16px 16px;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.message-form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #1e1e1e;
+  padding: 8px;
+}
+
+.message-input {
+  flex-grow: 1;
+  height: 48px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  background-color: #2b2b2b;
+  color: #e0e0e0;
+}
+
+.send-button {
+  height: 48px;
+  font-size: 16px;
+  border: none;
+  padding: 0px 20px;
+  outline: none;
+  background-color: #7300df;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+
+.v-divider {
+  height: 48px;
+  width: 2px;
+  background-color: #3d3d3d;
+}
+
+.clients-total {
+  margin: 20px 0;
+  color: #e0e0e0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .main {
+    width: 90vw; /* Adjust width for smaller screens */
+    height: 70vh; /* Adjust height for smaller screens */
+  }
+
+  .message-left,
+  .message-right {
+    max-width: 90%; /* Adjust message width for smaller screens */
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .name-input {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    width: 100vw; /* Adjust width for very small screens */
+    height: 80vh; /* Adjust height for very small screens */
+    border: none;
+    border-radius: 0;
+  }
+
+  .message-left,
+  .message-right {
+    max-width: 100%; /* Adjust message width for very small screens */
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .name-input {
+    font-size: 16px;
+  }
+}
